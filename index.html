@@ -4,25 +4,154 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Rediseño de la web de la ETSIT con Bootstrap</title>
+    <title>URJC Carousel</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com//bootstrap/3.2.0/fonts/glyphicons-halflings-regular.woff"/>
+    <link rel='stylesheet prefetch' href='css/circles.css'>
     <!-- Carousel extra styles -->
     <link rel="stylesheet" href="css/carousel.css">
+
   </head>
   <body>
-    <h1>Esto es un ejercicio para hacer una página para la ETSIT URJC con componentes de Boostrap.</h1>
+    
+    <div class="navbar-wrapper">
+      <div class="container">
 
-    <p>La página web ha de usar al menos:</p>
-    <ul>
-      <li>Un <i>carousel</i> (con su barra de navegación)</li>
-      <li>Al menos dos componentes más de Boostrap (a elección del alumno)</<li>
-      <li>Al menos un componente de <a href="http://www.bootsnipp.com">Bootsnipp</a></li>
-    </ul>
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Carousel URJC</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="www.urjc.es">Home</a></li>
+                <li><a href="http://www.urjc.es/informacion/">Informacion</a></li>
+                <li><a href="http://www.urjc.es/organizacion_universitaria/">Organizacion</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Info. Alumnos <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="http://www.urjc.es/estudios/">Estudios</a></li>
+                    <li><a href="http://www.urjc.es/alumnos/">Alumnos</a></li>
+                    <li><a href="http://www.urjc.es/comunidad_universitaria/">Ciudad Universitaria</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+    <!-- Carousel -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="images/aularioII-edificio.JPG" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Aulario II</h1>
+              <p>En el aulario II se encuentran la mayoría de las aulas de los grados de la <code>Facultad de Ciencias de la Comunicación</code>
+                </p>
+              <p><a class="btn btn-lg btn-danger" href="http://www.fccom.urjc.es/" role="button">Visita su web</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/deporte-estadio.JPG" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>ESTADIO  RAÚL GONZÁLEZ</h1>
+              <p>En el estadio forma parte del complejo deportivo que está compuesto por un gimnasio, pista de atletismo, campo de hierba natural entre otros</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/deparIII-edificio3.JPG" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Aulario III</h1>
+              <p>En el aulario III es donde es imparten la mayoría de las clases de la <code>Escuela Técnica Tuperior de Ingeniería de Telecomuncaciones</code></p>
+              <p><a class="btn btn-lg btn-danger" href="http://www.etsit.urjc.es/" role="button">Visita su web</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+     <div class="container-fluid">
+      <h1 class="page-header">Sitios de interes</h1>
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="images/FbkwCNza_400x400.jpeg" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Campus virtual</h4>
+              <span class="text-muted">Uno de los sitios donde nos comunicamos con profesores y otros alumnos</span>
+            </div>
+            <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="images/portal_docencia.gif" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Moodle</h4>
+              <span class="text-muted">Otro de los sitios donde nos comunicamos con profesores y otros alumnos</span>
+            </div>
+          </div>
+    </div>
+
+    <div class="media">
+  <div class="media-left media-middle">
+    <a href="http://www.urjc.es/">
+      <img class="media-object" src="images/logoURJC.jpg" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">Universidad Rey Juan Carlos </h4>
+      
+      La Universidad Rey Juan Carlos (URJC) es una de las seis universidades públicas de la Comunidad de Madrid. Su nombre es homenaje al Rey Juan Carlos I y fue creada por Ley 7/1996, de 8 de julio de 1996, con el lema latino Non nova, sed nove ("No cosas nuevas, sino de una manera nueva"). Su eslogan es Pública y preparada para ti. Según los datos estadísticos oficiales del censo de la propia institución realizados en 2013, la URJC es la tercera universidad pública de la región en número de alumnos, con 35 877 estudiantes.3
+  </div>
+</div>
+
+ <nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation">
+      <div class="navbar-toggler animate">
+        <span class="menu-icon"></span>
+      </div>
+      <ul class="navbar-menu animate">
+        <li>
+          <a href="https://github.com/mavilam" class="animate">
+            <span class="desc animate"> Quien soy</span>
+            <span class="glyphicon glyphicon-user"></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/TAUrjc" class="animate">
+            <span class="desc animate">Mi grupo </span>
+            <span class="glyphicon glyphicon-info-sign"></span>
+          </a>
+        </li>
+      </ul>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src='js/circles.js'></script>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="js/docs.min.js"></script>
